@@ -11,28 +11,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Rango Bravo</title>
         <script type="text/javascript">
-            function mascara(o, f) {
-                v_obj = o
-                v_fun = f
-                setTimeout("execmascara()", 1)
-            }
-            function execmascara() {
-                v_obj.value = v_fun(v_obj.value)
-            }
-            function mtel(v) {
-                v = v.replace(/D/g, "");             //Remove tudo o que não é dígito
-                v = v.replace(/^(d{2})(d)/g, "($1) $2"); //Coloca parênteses em volta dos dois primeiros dígitos
-                v = v.replace(/(d)(d{4})$/, "$1-$2");    //Coloca hífen entre o quarto e o quinto dígitos
-                return v;
-            }
-            function id(el) {
-                return document.getElementById(el);
-            }
-            window.onload = function () {
-                id('telefone').onkeypress = function () {
-                    mascara(this, mtel);
-                }
-            }
+
 
             function BlockKeybord()
             {
@@ -315,57 +294,35 @@
 
                 <br>
                 <div align = "left">
-                    CPF: <input type="text"   size="15" placeholder="Ex: 000.000.000-00" maxlength="11" name="cpf">
+                    
 
-                    Sexo: <input type="radio"    name="sexo" value="feminino">Feminino
-                    <input type="radio"    name="sexo" value="feminino">Masculino
-                    Telefone: <input type="text"  id="telefone" size="15" placeholder="Ex: (00) 00000-0000" maxlength="12" name="Telefone">
-                </div>
-                <br>
-                <br>
-                <div align = "left">
-                    Endereço: <input type="text" placeholder="Digite o Endereço" size="35" maxlength="256" name="endereco">
-                    Cidade: <input type="text" placeholder="Digite a Cidade" size="25" maxlength="256" name="cidade">
-
-                </div>
-                <br>
-                <br>
-                <div align ="left ">
-                    Estado:
-                    <select name="estados">
-                        <option> -  </option>
-                        <option> AC </option>
-                        <option> AL  </option>
-                        <option> AP  </option>
-                        <option> AM </option>
-                        <option> BA </option>
-                        <option> CE </option>
-                        <option> DF </option>
-                        <option> ES </option>
-                        <option> GO </option>
-                        <option> MA </option>
-                        <option> MT </option>
-                        <option> MS </option>
-                        <option> MG </option>
-                        <option> PA </option>
-                        <option> PB </option>
-                        <option> PR </option>
-                        <option> PE </option>
-                        <option> PI </option>
-                        <option> RJ </option>
-                        <option> RN </option>
-                        <option> RS </option>
-                        <option> RO </option>
-                        <option> RR </option>
-                        <option> SC </option>
-                        <option> SP </option>
-                        <option> SE </option>
-                        <option> TO </option>
-
+                    Filial: 
+                    <select name="filial">
+                        <option>  -  </option>
+                        <option>  Cubatão  </option>
+                        <option>  Itaquaquecetuba  </option>
+                        <option>  Jabaquara  </option>
                     </select>
-                    CEP: <input type="text"   size="15" placeholder="Ex: 00000-000" maxlength="8" name="cep">
-                    Bairro: <input type="text"   size="35" placeholder="Digite o nome do Bairro" maxlength="300" name="bairro">
+                    
+                    
+                    
+                    Descrição: <textarea  cols="20" rows="5" name="descrição"></textarea>
+                    Categoria
+                    <select name="categoria">
+                        <option>  -  </option>
+                        <option>  Molhos  </option>
+                        <option>  Carnes  </option>
+                        <option>  Massa  </option>
+                    </select>
+
+                    
                 </div>
+                <br>
+                
+                <br>
+                
+                
+              
 
                 <div id ="botao" align="center">
                     <input type="submit" value="Concluir" name="concluir">
