@@ -24,7 +24,7 @@ public class CadastroClienteServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int id = request.getParameter("id");
+        
 
         String nome = request.getParameter("name");
         String data = request.getParameter("data");
@@ -37,7 +37,7 @@ public class CadastroClienteServlet extends HttpServlet {
         String CEP = request.getParameter("CEP");
         String bairro = request.getParameter("bairro");
         
-        Cliente cliente = new Cliente(id,nome, data, CPF, sexo, telefone, endereco, cidade
+        Cliente cliente = new Cliente(nome, data, CPF, sexo, telefone, endereco, cidade
         ,estado, CEP, bairro);
         boolean ok = ClienteDAO.cadastrarCliente(cliente);
         PrintWriter out = response.getWriter();
